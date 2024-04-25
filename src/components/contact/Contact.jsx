@@ -2,11 +2,12 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { isValidName, isValidEmail } from "../../utils/formValidation";
-import {
-  sendMainEmail,
-  sendConfirmationEmail,
-} from "../../services/emailService";
+import { isValidName, isValidEmail, isValidMessage } from "../../utils/formValidation";
+import
+  {
+    sendMainEmail,
+    sendConfirmationEmail,
+  } from "../../services/emailService";
 import "./contact.scss";
 
 const variants = {
@@ -23,42 +24,57 @@ const variants = {
   },
 };
 
-const Contact = () => {
+const Contact = () =>
+{
   const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [success, setSuccess] = useState(false);
-  
+
   const isInView = useInView(ref, { margin: "-100px" });
 
-  const clearMessages = () => {
-    setTimeout(() => {
+  const clearMessages = () =>
+  {
+    setTimeout(() =>
+    {
       setError(false);
       setErrorMessage('');
       setSuccess(false);
     }, 5000);
   };
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e) =>
+  {
     e.preventDefault();
-    const { first_name, last_name, email } = formRef.current;
+    const { first_name, last_name, email, message } = formRef.current;
 
-    if (!isValidName(first_name.value) || !isValidName(last_name.value)) {
+    if (!isValidName(first_name.value) || !isValidName(last_name.value))
+    {
       setError(true);
       setErrorMessage('Names must contain only characters.');
       clearMessages();
       return;
     }
 
-    if (!isValidEmail(email.value)) {
+    if (!isValidEmail(email.value))
+    {
       setError(true);
       setErrorMessage('Please enter a valid email address.');
       clearMessages();
       return;
     }
 
-    try {
+    if (!isValidMessage(message.value))
+    {
+      setError(true);
+      setErrorMessage('Message cannot be empty.');
+      clearMessages();
+      return;
+    }
+
+    try
+    {
       const mainEmailResponse = await sendMainEmail(formRef.current);
       console.log("Main Email Sent", mainEmailResponse.text);
       setSuccess(true);
@@ -67,14 +83,17 @@ const Contact = () => {
       console.log("Confirmation Email Sent", confirmationEmailResponse.text);
 
       formRef.current.reset();
-    } catch (error) {
+    } catch (error)
+    {
       console.error("Email Sending Error", error);
       setError(true);
       setErrorMessage('Failed to send email.');
-    } finally {
+    } finally
+    {
       clearMessages();
     }
   };
+
 
   return (
     <motion.div
