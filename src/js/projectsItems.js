@@ -10,7 +10,7 @@ const projectsItems = [
     title: "React Portfolio",
     img: projImage1,
     desc: "My personal portfolio showcases my journey as a developer. It's a collection of my work, skills, and projects, reflecting my personal brand and professional accomplishments, built with React for a dynamic and responsive user experience.",
-    url: "https://github.com/MoSalem149/my-portfolio.git",
+    url: "https://github.com/MoSalem149/My_Portfolio-Template.git",
     comingSoon: false
   },
   {
