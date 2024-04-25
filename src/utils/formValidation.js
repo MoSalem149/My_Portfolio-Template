@@ -19,4 +19,13 @@ const isValidEmail = (email) => {
     return emailRegex.test(email);
 };
 
-export { isValidName, isValidEmail };
+/**
+ * Validates that the message is not empty.
+ * @param {string} message
+ * @returns {boolean}
+ */
+const isValidMessage = (message) => {
+    return message.trim().length > 0;
+};
+
+export { isValidName, isValidEmail, isValidMessage };
