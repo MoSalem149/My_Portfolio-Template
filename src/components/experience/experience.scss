@@ -1,0 +1,93 @@
+/*========== Experience SCSS Start ==========*/
+
+/* General settings for experience section */
+.experience {
+    margin-bottom: 75px;
+
+    .heading {
+        text-align: center;
+        padding: 10px 15px;
+    }
+}
+
+.timelineSpan {
+    background: linear-gradient(90.21deg, rgba(201, 113, 166, 0.5) -5.91%, rgba(107, 84, 210, 0.5) 111.58%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.vertical-timeline-element-content {
+    background-color: rgba(33, 33, 33, 0.5) !important;
+    color: #fff;
+    border: 2px solid #6c757d;
+    border-radius: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../../assets/img/Background-img/experience-bg.webp');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    &::after {
+        border-right-color: #212121;
+    }
+}
+
+.vertical-timeline-element-date {
+    color: #6c757d;
+}
+
+.vertical-timeline-element-icon {
+    border: 2px solid #6c757d;
+}
+
+#description {
+    color: #d5d5d5;
+}
+
+.button,
+.workButton,
+.schoolButton {
+    border: 2px solid #6c757d;
+
+    &.workButton {
+        background-color: #06d6a0;
+
+        &:hover {
+            background-color: #0ac593;
+        }
+    }
+
+    &.schoolButton {
+        background-color: #f9c74f;
+
+        &:hover {
+            background-color: #f3bc3c;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .vertical-timeline-element-date {
+        display: block !important;
+        float: none !important;
+        margin-top: 1.5em;
+    }
+
+    .experience .heading {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+/*========== Experience SCSS End ==========*/

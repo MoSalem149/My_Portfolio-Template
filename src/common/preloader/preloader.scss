@@ -1,0 +1,73 @@
+/*========== Preloader SCSS Start ==========*/
+
+/* General Styles for Preloader Section */
+@keyframes scale-up-white {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes scale-up-red {
+
+    0%,
+    30% {
+        transform: scale(0, 0);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999999;
+    background-color: #000;
+
+    .preloader-container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        .animated-preloader {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #845EC2;
+            animation: scale-up-white 1s ease-in-out infinite;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+
+            &::before {
+                background: #FF6F91;
+                animation: scale-up-red 1s ease-in-out infinite;
+            }
+
+            &::after {
+                background: #D65DB1;
+                animation: scale-up-white 1s ease-in-out infinite;
+            }
+        }
+    }
+}
+
+/*========== Preloader SCSS End ==========*/

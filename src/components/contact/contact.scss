@@ -1,0 +1,133 @@
+/*========== Contact SCSS Start ==========*/
+
+/* General Styles for Contact Section */
+.contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 50px 0;
+    color: #fff;
+    margin-bottom: 75px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../../assets/img/Background-img/contact-bg.webp');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .textContainer {
+        z-index: 2;
+        text-align: center;
+        margin-bottom: 50px;
+
+        h1 {
+            font-size: 4.5em;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0 20px;
+        }
+    }
+
+    .contactSpan {
+        background: linear-gradient(90.21deg, rgba(201, 113, 166, 0.5) -5.91%, rgba(107, 84, 210, 0.5) 111.58%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .formContainer {
+        z-index: 2;
+        width: 100%;
+        max-width: 800px;
+        padding: 0 20px;
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+
+            .name-row {
+                display: flex;
+                width: 100%;
+                gap: 20px;
+
+                div {
+                    flex: 1;
+                }
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 15px;
+                border: 2px solid #ffffff;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                border-radius: 5px;
+                font-size: 1em;
+
+                &:focus {
+                    border-image: linear-gradient(90.21deg, rgba(201, 113, 166, 0.5) -5.91%, rgba(107, 84, 210, 0.5) 111.58%) 1;
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 15rem;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+                border: none;
+                background-color: #ffa500;
+                color: white;
+                cursor: pointer;
+                font-weight: 500;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #cc8400;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        .textContainer {
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        .formContainer {
+            form {
+                .name-row {
+                    flex-direction: column;
+                }
+
+                button {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+/*========== Contact SCSS End ==========*/

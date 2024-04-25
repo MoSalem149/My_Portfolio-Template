@@ -1,0 +1,141 @@
+/*========== Services SCSS Start ==========*/
+
+/* General layout of service blocks */
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 75px;
+
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    .servicesSpan {
+        background: linear-gradient(90.21deg, rgba(201, 113, 166, 0.5) -5.91%, rgba(107, 84, 210, 0.5) 111.58%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .service-item {
+        .service-item-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+            margin: 5px;
+            width: 300px;
+            min-height: 250px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('../../assets/img/Background-img/services-bg.webp');
+                background-size: cover;
+                opacity: 0.7;
+                z-index: -1;
+            }
+
+            &:hover {
+                box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+                transform: translateY(-5px);
+            }
+
+            &.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .icon {
+                height: 60px;
+                width: 60px;
+                display: block;
+                margin: 0 auto 30px;
+                color: #e37bf8;
+                transition: all 0.4s ease;
+
+                .fa {
+                    font-size: 40px;
+                    line-height: 60px;
+                }
+            }
+
+            &:hover .icon {
+                transform: scale(1.2);
+                color: purple;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 33.3333%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-md-4 {
+        width: 50%;
+    }
+
+    .service-item-inner {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .col-sm-6,
+    .col-md-4 {
+        width: 100%;
+    }
+
+    .service {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .service-item-inner {
+        padding: 10px;
+        min-height: 200px;
+
+        .icon {
+            margin: 0 auto 20px;
+
+            .fa {
+                font-size: 35px;
+            }
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+/*========== Services SCSS End ==========*/

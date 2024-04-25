@@ -1,0 +1,144 @@
+/*========== Projects SCSS Start ==========*/
+
+/* Base styling for projects section */
+.projects {
+    position: relative;
+    margin-bottom: 75px;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .wrapper {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: padding 0.3s ease, gap 0.3s ease;
+
+            .imageContainer,
+            .textContainer {
+                flex: 1;
+                transition: transform 0.3s ease;
+
+                img {
+                    width: 100%;
+                    transition: width 0.3s ease;
+                }
+
+                img {
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+
+            .textContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+                padding: 10px;
+                transition: align-items 0.3s ease;
+
+                h2 {
+                    font-size: 24px;
+                    color: #fff;
+                }
+
+                p {
+                    color: #d5d5d5;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container .wrapper {
+            flex-direction: column;
+            gap: 30px;
+
+            .imageContainer img {
+                object-fit: contain;
+            }
+
+            .textContainer {
+                align-items: center;
+                text-align: center;
+
+                h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.sourceCodeButton {
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #cc6e00;
+    }
+}
+
+.comingSoonButton {
+    background-color: #6e6ecc;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #5a5a99;
+    }
+}
+
+.projectsHeader {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 2rem;
+        vertical-align: middle;
+    }
+
+    svg {
+        font-size: 2rem;
+        vertical-align: middle;
+    }
+}
+
+.projectsSpan {
+    background: linear-gradient(90.21deg,
+            rgba(201, 113, 166, 0.5) -5.91%,
+            rgba(107, 84, 210, 0.5) 111.58%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/*========== Projects SCSS End ==========*/

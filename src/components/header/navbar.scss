@@ -1,0 +1,171 @@
+/*========== Navbar SCSS Start ==========*/
+
+/* Navbar Base Styles */
+nav.navbar {
+    padding: 18px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.32s ease-in-out;
+    background-image: url('../../assets/img/Background-img/header-bg.webp');
+    background-size: cover;
+
+    &.scrolled {
+        padding: 0;
+        background-color: black;
+    }
+
+    a.navbar-brand {
+        width: 10%;
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+
+        .nav-link {
+            font-weight: 400;
+            color: #fff;
+            letter-spacing: 0.8px;
+            padding: 10px 15px;
+            font-size: 18px;
+            opacity: 0.9;
+            transition: opacity 0.3s ease-in-out, color 0.3s ease;
+            text-decoration: none;
+            position: relative;
+
+            &.navbar-link {
+                padding-right: 15px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid transparent;
+                display: flex;
+                align-items: center;
+                transition: opacity 1s ease-in-out, border-color 1s ease-in-out;
+            }
+
+            &.underline {
+                color: #ffffff;
+                font-weight: 700;
+            }
+
+            &:hover,
+            &.underline {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(90.21deg,
+                            rgba(170, 54, 124, 0.5) -5.91%,
+                            rgba(74, 47, 189, 0.5) 111.58%);
+                    opacity: 1;
+                    transition: opacity 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    span.navbar-text {
+        display: flex;
+        align-items: center;
+
+        button {
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 10px 30px;
+            font-size: 18px;
+            margin-left: 18px;
+            position: relative;
+            background-color: rgba(0, 91, 187, 0.8);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: #0075cc;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-color: rgba(255, 255, 255, 0.75);
+                transform: translateY(-2px);
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            width: 24px;
+            height: 17px;
+            background-image: none;
+            position: relative;
+            border-bottom: 2px solid #fff;
+            transition: all 300ms linear;
+            top: -2px;
+
+            &:after,
+            &:before {
+                width: 24px;
+                position: absolute;
+                height: 2px;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                content: "";
+                z-index: 2;
+                transition: all 300ms linear;
+            }
+
+            &:after {
+                top: 8px;
+            }
+
+            &[aria-expanded="true"] {
+                .navbar-toggler-icon {
+                    border-color: transparent;
+
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+
+                    &:before {
+                        transform: translateY(8px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 968px) {
+        background-color: black;
+    }
+}
+
+/*========== Navbar SCSS End ==========*/

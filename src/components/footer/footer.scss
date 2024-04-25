@@ -1,0 +1,110 @@
+/*========== Footer SCSS Start ==========*/
+
+/* Footer Base Styles */
+.footer {
+    position: relative;
+    color: #ffffff;
+    padding: 40px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../../assets/img/Background-img/footer-bg.webp');
+        background-size: cover;
+        opacity: 1;
+        z-index: -1;
+        opacity: 0.9;
+    }
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .box {
+        max-width: 400px;
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 1.3rem;
+            color: #f8f9fa;
+            margin-bottom: 15px;
+        }
+
+        p,
+        a {
+            color: #c792ea;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                color: #ae82ff;
+                text-decoration: none;
+            }
+        }
+
+        i {
+            margin-right: 8px;
+        }
+    }
+
+    .share {
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #989898;
+            transition: color 0.3s ease;
+            font-size: 1.5rem;
+
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .box {
+            max-width: none;
+            width: 80%;
+        }
+    }
+}
+
+.credit {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #9da5b1;
+
+    a {
+        color: #7289da;
+        transition: color 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: #8a9df7;
+        }
+    }
+
+    .heart {
+        color: #ff4757;
+    }
+}
+
+/*========== Footer SCSS End ==========*/

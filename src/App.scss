@@ -1,0 +1,100 @@
+/*========== Custom Font Start ==========*/
+@font-face {
+    font-family: Centra;
+
+    @each $weight, $file in (700: "Bold", 500: "Medium", 400: "Book") {
+        src: url("./assets/fonts/CentraNo2-#{$file}.ttf");
+        font-weight: $weight;
+    }
+}
+
+/*========== Custom Font End ==========*/
+
+/*========== Default Css Start ==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+
+    &::-webkit-scrollbar {
+        width: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgb(235, 202, 245);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #420177;
+    }
+}
+
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    color: #fff !important;
+    font-family: "Centra", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+button,
+ul {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+@media (min-width: 1700px) {
+    main .container {
+        max-width: 100%;
+        padding: 0 150px;
+    }
+}
+
+p {
+    &.success {
+        color: green;
+    }
+
+    &.danger {
+        color: red;
+    }
+}
+
+/*========== Default Css End ==========*/

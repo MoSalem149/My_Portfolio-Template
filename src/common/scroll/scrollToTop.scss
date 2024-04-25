@@ -1,0 +1,34 @@
+/*========== Scroll To Top SCSS Start ==========*/
+
+/* General Styles for Scroll To Top Section */
+.scroll-to-top {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99999;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    line-height: 77px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    display: none;
+
+    &.visible {
+        display: block !important;
+    }
+
+    .scroll-icon {
+        font-size: 31px;
+        color: #ffffff;
+        display: inline-block;
+
+        i {
+            transform: none !important;
+        }
+    }
+}
+
+/*========== Scroll To Top SCSS End ==========*/

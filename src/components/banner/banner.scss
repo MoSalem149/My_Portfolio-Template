@@ -1,0 +1,288 @@
+/*========== Banner SCSS Start ==========*/
+
+/* General Styles for Banner Section */
+.banner {
+    margin-top: 160px;
+    margin-bottom: 75px;
+    padding-bottom: 120px;
+
+    background: {
+        position: top center;
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    h1 {
+        font-size: 55px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        line-height: 1;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    img {
+        animation: updown 10s linear infinite;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .welcome-message {
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        font-size: 50px;
+        display: inline-block;
+
+        .welcomeSpan {
+            background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: inline-block;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 2s;
+        }
+    }
+
+    .dataSection {
+        background-image: url('../../assets/img/Background-img/content-bg.webp');
+        background-size: cover;
+    }
+
+    .btn {
+        font-weight: 700;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 10px 30px;
+        font-size: 18px;
+        margin-left: 18px;
+        margin-top: 30px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        border-radius: 10px;
+        background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+        box-sizing: border-box;
+        display: inline-block;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 2.5s;
+
+        span {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.1rem;
+            color: #fff;
+            z-index: 1;
+        }
+
+        i {
+            margin-left: 0.3rem;
+            font-size: 18px;
+            transition: 0.3s;
+            color: #fff;
+        }
+
+        &:hover {
+            background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.7) -5.91%, rgba(74, 47, 189, 0.7) 111.58%);
+
+            i {
+                transform: translateY(3px);
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            background-color: black;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: width 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+    }
+
+    .socials {
+        position: relative;
+        margin-top: 20px;
+
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-bottom: 14px;
+            }
+
+            a {
+                font-size: 2rem;
+                display: inline-block;
+                line-height: 44px;
+                color: white;
+                width: 44px;
+                height: 44px;
+                text-align: center;
+                margin-right: 8px;
+                border-radius: 100%;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &.github:hover {
+                    background-color: #0e0e0e;
+                }
+
+                &.twitter:hover {
+                    background-color: black;
+                }
+
+                &.linkedin:hover {
+                    background-color: #007bb6;
+                }
+
+                &.facebook:hover {
+                    background-color: #3b5998;
+                }
+
+                &.email:hover {
+                    background-color: #c71610;
+                }
+
+                &.telegram:hover {
+                    background-color: #0088cc;
+                }
+            }
+        }
+    }
+}
+
+.typograph {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+    background: linear-gradient(90.21deg, rgba(201, 113, 166, 0.5) -5.91%, rgba(107, 84, 210, 0.5) 111.58%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.txt-rotate>.wrap {
+    border-right: 0.08em solid #666;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (min-width: 768px) {
+    .typograph {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        padding-bottom: 30px;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .welcome-message,
+        .welcome-message .welcomeSpan {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        .typograph {
+            font-size: 20px;
+        }
+
+        .btn {
+            padding: 5px 15px;
+            margin-top: 10px;
+            margin-left: 0;
+            font-size: 14px;
+
+            &::before {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        img {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+        }
+
+        img:hover {
+            box-shadow: none;
+        }
+
+        .social-icons a:hover {
+            transform: none;
+        }
+    }
+}
+
+/*========== Banner SCSS End ==========*/

@@ -1,0 +1,18 @@
+/*========== Main SCSS Start ==========*/
+
+/* Importing all SCSS files */
+@import '../../App.scss';
+@import '../../common//error/error';
+@import '../../common/preloader/preloader';
+@import '../../components/header/navbar';
+@import '../../components/banner/banner';
+@import '../../components/about/about';
+@import '../../components/promises/services';
+@import '../../components/skills/skills';
+@import '../../components/experience/experience';
+@import '../../components/projects/projects';
+@import '../../components/contact/contact';
+@import '../../common/scroll/scrollToTop';
+@import '../../components/footer/footer';
+
+/*========== Main SCSS End ==========*/

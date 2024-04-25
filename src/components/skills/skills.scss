@@ -1,0 +1,84 @@
+/*========== Skills SCSS Start ==========*/
+
+/* General styles for the skill section */
+.skill {
+    padding: 80px 0 50px;
+    position: relative;
+    margin-bottom: 75px;
+
+    .skillContents {
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: 500;
+    }
+
+    .abilitiesSpan {
+        background: linear-gradient(90.21deg,
+                rgba(201, 113, 166, 0.5) -5.91%,
+                rgba(107, 84, 210, 0.5) 111.58%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    p {
+        color: #d5d5d5;
+        font-size: 1.3rem;
+        letter-spacing: 0.8px;
+        line-height: 1.3em;
+        margin: 14px 0 75px;
+    }
+
+    .skill-slider {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+
+        .item {
+            text-align: center;
+            padding: 10px;
+
+            img {
+                width: 50%;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto 5px;
+            }
+
+            h5 {
+                color: #fff;
+                font-size: 18px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .skill-bx {
+        position: relative;
+        border-radius: 64px;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        height: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('../../assets/img/Background-img/skills-bg.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    }
+
+}
+
+/*========== Skills SCSS End ==========*/

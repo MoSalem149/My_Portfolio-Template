@@ -1,0 +1,208 @@
+/*========== About SCSS Start ==========*/
+
+/* General Styles for About Section */
+.about {
+    position: relative;
+    color: #fff;
+    padding: 5rem 0;
+    margin-bottom: 75px;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../../assets/img/Background-img/about-bg.webp');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .meSpan {
+        background: linear-gradient(90.21deg, rgba(201, 113, 166, 0.5) -5.91%, rgba(107, 84, 210, 0.5) 111.58%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+        background-image: url('../../assets/img/Background-img/planets.webp');
+        background-size: cover;
+        background-position: 250px;
+
+        .image {
+            text-align: center;
+            margin-left: 18px;
+            flex: 1 1 30rem;
+
+            img {
+                width: auto;
+                height: 400px;
+                max-width: 100%;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+
+        .content {
+            flex: 1 1 50rem;
+            padding: 2rem;
+            color: #d5d5d5;
+
+            h3 {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .tag {
+                color: #e37bf8;
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .resumebtn {
+        .btn {
+            background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.7) -5.91%, rgba(74, 47, 189, 0.7) 111.58%);
+
+                .fas.fa-chevron-right {
+                    transform: translateX(5px) scale(1.1);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 0;
+
+            .content {
+                order: 1;
+                padding: 0 1rem;
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .image {
+                order: 2;
+                max-width: 50%;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .row {
+            flex-direction: column;
+
+            .content,
+            .image {
+                flex: 1 0 100%;
+                text-align: center;
+                padding: 0rem;
+
+                img {
+                    height: auto;
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+            }
+
+            .content {
+                h3 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+
+                .tag {
+                    font-size: 1.1rem;
+                }
+
+                .btn {
+                    padding: 0.8rem 1.6rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .row {
+            background-image: none;
+
+            .image img {
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .content {
+                h3 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    padding: 0 15px;
+                }
+
+                .tag {
+                    font-size: 1rem;
+                }
+
+                .btn {
+                    padding: 0.7rem 1.4rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+/*========== About SCSS End ==========*/
